@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -15,7 +16,7 @@ class ContactController extends Controller
             ['label' => 'Instagram', 'isi' => '@evetjee._'],
         ];
 
-        return view('contact', ['info' => $info]);
+        return view('contact', ['contacts' => Contact::all(), 'info' => $info]);
     }
 
     public function send(Request $request)

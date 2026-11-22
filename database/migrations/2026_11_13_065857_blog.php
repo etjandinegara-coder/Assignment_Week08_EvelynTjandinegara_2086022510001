@@ -13,7 +13,10 @@ return new class extends Migration
     {
          Schema::create('blog', function (Blueprint $table) {
             $table->id();
-            $table->string('artikel');
+            $table->date('tanggal');
+            $table->string('judul');
+            $table->text('ringkasan');
+            $table->timestamps();
         });
     }
 

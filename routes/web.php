@@ -10,3 +10,4 @@ Route::get('/blog', [PageController::class, 'blog'])->name('blog');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
